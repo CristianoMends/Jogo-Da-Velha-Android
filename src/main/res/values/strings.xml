@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Jogo da Velha</string>
+    <string name="vencedor">O Vencedor foi </string>
+    <string name="descricaobtn">Botão para clicar entre X e O</string>
+
+    <string name="Jogador1">Jogador 1</string>
+    <string name="Jogador2">Jogador 2</string>
+
+    <string name="empate1"> Empate! Ambos os jogadores são igualmente habilidosos. Vamos ver quem se destaca no próximo jogo!</string>
+    <string name="empate2"> Outro empate! Vocês realmente têm talento igual. Quem será o primeiro a conquistar a vitória?</string>
+    <string name="empate3"> Terceiro empate seguido! Vocês estão realmente empatados no quesito habilidade. Quem dará o primeiro passo em direção à vitória?</string>
+    <string name="empate4"> Empate após empate! Essa competição está ficando acirrada. Será que algum de vocês conseguirá romper essa sequência e se tornar o vencedor?</string>
+
+    <string name="vitoria1"> vence! Parabéns pela vitória! Você mostrou suas habilidades no jogo da velha. Continue assim e conquiste mais vitórias!</string>
+    <string name="vitoria2"> vence novamente! Você está dominando o jogo da velha. Será que alguém conseguirá desafiá-lo e impedir sua sequência vitoriosa?</string>
+    <string name="vitoria3"> arrasa novamente! Três vitórias seguidas mostram sua maestria no jogo da velha. Será que alguém conseguirá pará-lo?</string>
+    <string name="vitoria4"> é imbatível! Com uma sequência de vitórias impressionante, você está dominando o jogo da velha. Quem terá coragem de enfrentá-lo e tentar derrotá-lo?</string>
+
+
+</resources>

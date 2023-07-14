@@ -30,3 +30,5 @@
 *.jks
 
 **/manifest
+# Android Manifest
+AndroidManifest.xml

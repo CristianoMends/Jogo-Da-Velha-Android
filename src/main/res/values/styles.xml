@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="CustomAlertDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="android:windowBackground">@color/transparent</item> <!-- Define o fundo transparente -->
+    <item name="android:backgroundDimEnabled">true</item> <!-- Habilita o escurecimento do fundo -->
+    <item name="android:backgroundDimAmount">0.5</item> <!-- Define a opacidade do fundo (0.0 a 1.0) -->
+    <item name="android:textColor">@color/white</item>
+</style>
+    <style name="EstiloBotao" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@color/black</item> <!-- Define o fundo transparente -->
+
+        <item name="android:buttonBarPositiveButtonStyle">@drawable/x</item>
+        <item name="android:backgroundDimEnabled">true</item> <!-- Habilita o escurecimento do fundo -->
+        <item name="android:backgroundDimAmount">0.5</item> <!-- Define a opacidade do fundo (0.0 a 1.0) -->
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="PositiveButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button</item>
+        <item name="android:layout_width">50dp</item>
+        <item name="android:layout_height">50dp</item>
+    </style>
+
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/btn_radius_red</item>
+    </style>
+
+</resources>
+

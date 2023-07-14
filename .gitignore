@@ -28,3 +28,5 @@
 
 # Keystore files
 *.jks
+
+**/manifest

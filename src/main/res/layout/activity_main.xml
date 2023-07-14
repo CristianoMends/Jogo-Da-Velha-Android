@@ -4,196 +4,365 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@color/white"
+    android:id="@+id/containerParent"
     tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/parent2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/parent1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/black"
+        >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akaya_telivigala"
+            android:layout_marginStart="5dp"
+            android:text="Empates:"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+
+
+        <TextView
+            android:id="@+id/textEmpates"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/parent1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akaya_telivigala"
+            android:text="Jog. O"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textScore1"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="VS"
+            android:textColor="@color/white"
+
+            />
+
+        <TextView
+            android:id="@+id/textScore2"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/akaya_telivigala"
+            android:text="Jog. X"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+
+
+    </LinearLayout>
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/black"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/adView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="@color/white"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/adView3">
 
-    <ImageView
-        android:id="@+id/btn00"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:contentDescription='@string/descricaobtn'
-        android:background="@color/black"
-        android:onClick="coisar"
-        app:layout_constraintBottom_toTopOf="@id/btn10"
-        app:layout_constraintEnd_toStartOf="@id/btn11" />
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:rowCount="3">
+
+
+
+        <ImageView
+            android:id="@+id/btn00"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+
+            android:layout_marginBottom="5dp"
+            android:layout_marginEnd="5dp"
+
+            android:background="@color/white"
+            android:contentDescription='@string/descricaobtn'
+            android:onClick="jogar" />
 
         <ImageView
             android:id="@+id/btn01"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginBottom="10dp"
-            android:background="@color/black"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+
+            android:background="@color/white"
             android:contentDescription='@string/descricaobtn'
-            android:onClick="coisar"
-            app:layout_constraintBottom_toTopOf="@id/btn11"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            android:onClick="jogar" />
 
-    <ImageView
-        android:id="@+id/btn02"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginBottom="10dp"
-        android:contentDescription='@string/descricaobtn'
-        android:background="@color/black"
-        android:onClick="coisar"
-        app:layout_constraintBottom_toTopOf="@id/btn12"
-        app:layout_constraintStart_toEndOf="@id/btn11" />
+        <ImageView
+            android:id="@+id/btn02"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+
+            android:layout_marginBottom="5dp"
+            android:layout_marginStart="5dp"
+
+            android:background="@color/white"
+            android:contentDescription='@string/descricaobtn'
+            android:onClick="jogar" />
 
 
-    <ImageView
-        android:id="@+id/btn10"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/black"
-        android:contentDescription='@string/descricaobtn'
-        android:onClick="coisar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/btn11"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/btn10"
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+
+            android:background="@color/white"
+            android:contentDescription='@string/descricaobtn'
+            android:onClick="jogar" />
 
         <ImageView
             android:id="@+id/btn11"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:background="@color/black"
-            android:onClick="coisar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+
+            android:background="@color/white"
             android:contentDescription='@string/descricaobtn'
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:onClick="jogar" />
 
         <ImageView
             android:id="@+id/btn12"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="10dp"
-            android:background="@color/black"
-            android:contentDescription='@string/descricaobtn'
-            android:onClick="coisar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@id/btn11"
-            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/btn20"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:background="@color/black"
-        android:contentDescription='@string/descricaobtn'
-        android:onClick="coisar"
-        app:layout_constraintEnd_toStartOf="@id/btn11"
-        app:layout_constraintTop_toBottomOf="@id/btn10" />
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+
+            android:background="@color/white"
+            android:contentDescription='@string/descricaobtn'
+            android:onClick="jogar"/>
+
+        <ImageView
+            android:id="@+id/btn20"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+
+            android:background="@color/white"
+            android:contentDescription='@string/descricaobtn'
+            android:onClick="jogar"/>
 
         <ImageView
             android:id="@+id/btn21"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/black"
-            android:onClick="coisar"
-            android:contentDescription='@string/descricaobtn'
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btn11" />
 
-    <ImageView
-        android:id="@+id/btn22"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:background="@color/black"
-        android:onClick="coisar"
-        android:contentDescription='@string/descricaobtn'
-        app:layout_constraintStart_toEndOf="@id/btn11"
-        app:layout_constraintTop_toBottomOf="@id/btn12" />
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+
+            android:background="@color/white"
+            android:contentDescription='@string/descricaobtn'
+            android:onClick="jogar" />
+
+        <ImageView
+            android:id="@+id/btn22"
+
+
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="5dp"
+
+            android:background="@color/white"
+            android:contentDescription='@string/descricaobtn'
+            android:onClick="jogar" />
+        </GridLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+    <ImageButton
+        android:id="@+id/btnVoltar"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_radius_red"
+        android:contentDescription="@string/descricaobtn"
+        android:onClick="voltar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:srcCompat="?attr/actionModeCloseDrawable" />
+
+    <ImageButton
+        android:id="@+id/btnCor"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/btn_radius"
+        android:contentDescription="@string/descricaobtn"
+        app:layout_constraintStart_toStartOf="@+id/btnVoltar"
+        app:layout_constraintEnd_toEndOf="@+id/btnReiniciar"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"/>
+
+
+
+    <ImageButton
+        android:id="@+id/btnReiniciar"
+        android:layout_width="80dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="35dp"
+        android:background="@drawable/btn_radius_red"
+        android:contentDescription="TODO"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView8"
+        app:srcCompat="@android:drawable/ic_menu_revert" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:text="Empates:"
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-4387686099357802/3647226960"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/btnReiniciar"
+        />
 
-    <TextView
-        android:id="@+id/textEmpates"
-        android:layout_width="40dp"
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView3"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:layout_marginTop="15dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jogador 1:"
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-4387686099357802/7642312294"
+        app:layout_constraintTop_toBottomOf="@id/parent2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="80dp"
+        android:textAlignment="center"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        android:layout_marginStart="35dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
     <TextView
-        android:id="@+id/textScore1"
-        android:layout_width="40dp"
+        android:id="@+id/textView8"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/textEmpates" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jogador 2:"
-        android:textColor="@color/white"
-        android:textSize="16sp"
+        android:text="Novo Jogo"
+        android:textSize="13sp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="15dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+        android:layout_marginEnd="35dp"
+        />
 
     <TextView
-        android:id="@+id/textScore2"
-        android:layout_width="40dp"
+        android:id="@+id/textView10"
+        android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="0"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/textScore1" />
+        android:text="Tema"
+        android:textSize="13sp"
+        android:labelFor="@+id/btnCor"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView8"
+        app:layout_constraintStart_toStartOf="@+id/textView6"
+        />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

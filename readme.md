@@ -1,6 +1,6 @@
 # Jogo da Velha Android
 
-![Jogo da Velha](jogo_da_velha_screenshot.png)
+![Jogo da Velha](Screenshots/ico.png)
 
 Este é um simples jogo da velha desenvolvido para dispositivos Android. É um projeto open-source que pode ser facilmente baixado, compilado e executado em seu dispositivo Android.
 
@@ -14,9 +14,9 @@ Este é um simples jogo da velha desenvolvido para dispositivos Android. É um p
 
 ## Capturas de tela
 
-![Tela Inicial](screenshots/tela_inicial.png)
-![Jogando](screenshots/jogando.png)
-![Vitória](screenshots/vitoria.png)
+![Tela Inicial](Screenshots/Screenshot_20230623_093053.png)
+![Jogando](Screenshots/Screenshot_20230712_121451.png)
+![Vitória](Screenshots/Screenshot_20230621_162447.png)
 
 ## Como Executar
 

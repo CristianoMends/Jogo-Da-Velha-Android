@@ -4,6 +4,9 @@
 
 Este é um simples jogo da velha desenvolvido para dispositivos Android, utilizando as linguagens Java e Kotlin. É um projeto open-source que pode ser facilmente baixado, compilado e executado em seu dispositivo Android.
 
+## video
+https://drive.google.com/file/d/1n7uaAsBqX9No1Pr_jJo9DAg9tfIWaYHl/view?usp=drive_link
+
 ## Características
 
 - Interface de usuário simples e intuitiva.

@@ -29,7 +29,7 @@ https://drive.google.com/file/d/1n7uaAsBqX9No1Pr_jJo9DAg9tfIWaYHl/view?usp=drive
 1. Clone este repositório para o seu computador usando o seguinte comando:
 
 ```bash
-git clone https://github.com/CristianoMends/Jogo-Da-Velha-Android.git
+git clone https://github.com/CristianoMends/Jogo-Da-Velha-Android
 ````
 2. Abra o projeto no Android Studio.
 
